@@ -21,7 +21,7 @@ resource "azurerm_network_security_rule" "insecure_ssh" {
   direction                   = "Inbound"
   access                      = "Allow"
   protocol                    = "Tcp"
-  source_port_range           = "*"
+  source_port_range           = "172.190.231.235/32"
   destination_port_range      = "22"
   source_address_prefix       = "*" # <--- ช่องโหว่: เปิดสู่สาธารณะ!
   destination_address_prefix  = "*"
